@@ -1,0 +1,14 @@
+.about{
+    max-width: 900px;
+    margin: 0 auto;
+    
+}
+
+
+   .photo1 {
+    width: 339px;
+   
+    float: left;
+    margin-left: 10px;
+    border-radius: 50%;
+}

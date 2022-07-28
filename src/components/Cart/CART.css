@@ -1,0 +1,36 @@
+.cart{
+    background-color: rgb(109, 153, 196);
+    width: 30vw;
+    height: auto;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+}
+
+.Header{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.50rem;
+}
+
+.cartName{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.X{
+    position: absolute;
+    right: 20px;
+}
+
+.Total{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.50rem;
+    text-align: center;
+}
+.cart-row {
+    font-size: 18px;
+    display: flex;
+}
+.col {
+    flex: 1 0;
+}
