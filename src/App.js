@@ -15,7 +15,7 @@ const AuthPage = React.lazy(() => import("./components/Pages/Authpage"));
 const UserProfile = React.lazy(() =>
   import("./components/Profile/UserProfile")
 );
-const ItemDetails = React.lazy(() => import("./components/Pages/ItemDetails"));
+const Item = React.lazy(() => import("./components/Pages/ItemDetails"));
 const Home = React.lazy(() => import("./components/Pages/Home"));
 const App = () => {
   const authCtx = useContext(AuthContext);
@@ -43,7 +43,7 @@ const App = () => {
               <AuthPage />
             </Route>
             <Route path="/store/:productId">
-              <ItemDetails />
+              <Item />
             </Route>
             <Route path="/store">
               {cartshown && <Cart onclick={hidecarthandler}></Cart>}
