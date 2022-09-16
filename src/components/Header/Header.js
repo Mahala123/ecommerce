@@ -6,18 +6,15 @@ import { NavLink } from "react-router-dom";
 import AuthContext from "../Store/Auth-Context";
 
 const Header = (props) => {
-
-  const authCtx= useContext(AuthContext)
-  const cartCtx= useContext(Cartcontext)
+  const authCtx = useContext(AuthContext);
+  const cartCtx = useContext(Cartcontext);
   //const email=localStorage.getItem('Email');
 
-  const isLoggedIn =authCtx.isLoggedIn;
-  const logoutHandler=async()=>{
-      authCtx.logout();
-      
-      }
+  const isLoggedIn = authCtx.isLoggedIn;
+  const logoutHandler = async () => {
+    authCtx.logout();
+  };
   let total = 0;
-  
   cartCtx.items.forEach((element) => {
     total += element.quantity;
   });
@@ -25,41 +22,30 @@ const Header = (props) => {
   return (
     <header>
       <ul className="header">
-      {!isLoggedIn &&(
-<NavLink className="a" to="/auth">
-    Login
-  </NavLink>
-  )}
-        
-          <li>
-            <NavLink to="/">HOME</NavLink>
-          </li>
-          {isLoggedIn &&(
-  <NavLink  to="/store">
-    STORE
-  </NavLink>
-  )}
-          <li>
-            <NavLink to="/about">ABOUT</NavLink>
-          </li>
+        {!isLoggedIn && (
+          <NavLink className="cart-holder1" to="/auth">
+            LOGIN
+          </NavLink>
+        )}
+        <li>
+          <NavLink to="/">HOME</NavLink>
+        </li>
+        {isLoggedIn && <NavLink to="/store">STORE</NavLink>}
+        <li>
+          <NavLink to="/about">ABOUT</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Contactus">CONTACT US</NavLink>
+        </li>
+        <li>{isLoggedIn && <NavLink to="/profile">PROFILE</NavLink>}</li>
+        <li>
+          <NavLink to="/MOVIES">MOVIES</NavLink>
+        </li>
+        <li>
+          {" "}
+          {isLoggedIn && <button className="cart-holder1" onClick={logoutHandler}>LOGOUT</button>}
+        </li>
 
-          <li>
-            <NavLink to="/Contactus">Contact us</NavLink>
-          </li>
-         <li>
-         {isLoggedIn &&(
-            <NavLink  to="/profile">
-              Profile
-            </NavLink>
-         )}
-         </li>
-          <li>
-            <NavLink to="/MOVIES">MOVIES</NavLink>
-          </li>
-          <li> {isLoggedIn &&(
-     <button onClick={logoutHandler}>Logout</button>
-    )}</li>
-        
         <button className="cart-holder" onClick={props.onclick}>
           CART
           <span className="cart-number">{total}</span>
