@@ -11,8 +11,7 @@ const CartProvider = (props) => {
     newItemArray.forEach((element,index )=> {
         if(item.id===element.id){
         hasItem=true;
-            newItemArray[index].quantity=Number(newItemArray[index].quantity)+Number(item.quantity);
-            
+            newItemArray[index].quantity=Number(newItemArray[index].quantity)+Number(item.quantity);   
         }
     });
     if(hasItem===false)

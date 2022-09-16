@@ -20,16 +20,13 @@ const submitHandler = (event)=>{
        returnSecureToken: false
      }),
      headers:{
-       'Content-Type' : 'application/json'
-       
+       'Content-Type' : 'application/json' 
      }
    }).then(res =>{
     history.replace('./');
     console.log(res);
-
    })
 }
-
   return (
     <form className={classes.form} onSubmit={submitHandler}>
       <div className={classes.control}>
