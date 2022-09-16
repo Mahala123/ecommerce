@@ -8,9 +8,6 @@ const Addmovies=(props)=>{
   
     function submitHandler(event) {
       event.preventDefault();
-  
-      // could add validation here...
-  
       const movie = {
         title: titleRef.current.value,
         openingText: openingTextRef.current.value,
@@ -20,20 +17,20 @@ const Addmovies=(props)=>{
       props.onAddMovie(movie);
     }
     return(
-        <form onSubmit={submitHandler}>
-      <div className='control'>
+        <form className='control' onSubmit={submitHandler}>
+      <div >
         <label htmlFor='title'>Title</label>
         <input type='text' id='title' ref={titleRef} />
-      </div>
-      <div className='conttrol'>
+      </div><br/>
+      <div>
         <label htmlFor='opening-text'>Opening Text</label>
-        <textarea rows='5' id='opening-text' ref={openingTextRef}></textarea>
-      </div>
-      <div className='control'>
+        <textarea rows='4' id='opening-text' ref={openingTextRef}></textarea>
+      </div><br/>
+      <div>
         <label htmlFor='date'>Release Date</label>
-        <input type='text' id='date' ref={releaseDateRef} />
-      </div>
-      <button>Add Movie</button>
+        <input type='text' id='date' ref={releaseDateRef} /><br/>
+      </div><br/>
+      <button >Add Movie</button>
     </form>
     )
 };
