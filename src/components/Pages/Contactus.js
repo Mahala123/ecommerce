@@ -3,8 +3,12 @@ import "./Contactus.css";
 import { NavLink } from "react-router-dom";
 
 const Contactus = () => {
-
-
+  const submitDetails=()=>{
+    fetch("https://newecommerce-ad44d-default-rtdb.firebaseio.com/contact.json",{
+      
+    }
+    )
+  }
   return (
     <React.Fragment>
     <header>
@@ -20,7 +24,7 @@ const Contactus = () => {
           </li>
 
           <li>
-            <NavLink to="/Contactus">Contact us</NavLink>
+            <NavLink to="/Contactus">CONTACT US</NavLink>
           </li>
           <li>
             <NavLink to="/MOVIES">MOVIES</NavLink>
@@ -30,13 +34,14 @@ const Contactus = () => {
       </header>
 
     <div className="form-style-6">
-<h1>Contact Us</h1>
-<form>
-<input type="text" name="field1" placeholder="Your Name" />
-<input type="email" name="field2" placeholder="Email Address" />
-<input type="number" name="field3" placeholder="Contact number" />
+    <div className="container">
+<h1>CONTACT US</h1><br/>
+</div>
+<form className="container" onSubmit={submitDetails}>
+<input type="text" name="field1" placeholder="Your Name"/>
+<input type="email" name="field2" placeholder="Email Address"/>
+<input type="number" name="field3" placeholder="Contact number"/>
 <ul><button type='submit'>SEND</button></ul>
-
 </form>
 </div>
    
