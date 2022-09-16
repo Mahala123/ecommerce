@@ -18,7 +18,7 @@ const Home=()=>{
           </li>
 
           <li>
-            <NavLink to="/Contactus">Contact us</NavLink>
+            <NavLink to="/Contactus">CONTACT US</NavLink>
           </li>
           <li>
             <NavLink to="/MOVIES">MOVIES</NavLink>
@@ -26,7 +26,7 @@ const Home=()=>{
         
         </ul>
         <h1>THE GENERICS</h1>
-        <button className='latest-album'>Get Our Latest Album</button>
+        <button className='latest-album'>GET OUR LATEST ALBUM</button>
         <button className='play-btn'>►</button>
       </header>
       <section className='container'>
