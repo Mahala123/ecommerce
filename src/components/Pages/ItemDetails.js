@@ -1,6 +1,6 @@
 import { useParams,NavLink } from "react-router-dom";
 import React from "react";
-//import './Itemdetails.css';
+import './Itemdetails.css';
 const productsArr = [
   {
     id: "p1",
@@ -12,6 +12,7 @@ const productsArr = [
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
 
     quantity: 1,
+    
   },
 
   {
@@ -70,7 +71,7 @@ const ItemDetails = () => {
           </li>
 
           <li>
-            <NavLink to="/Contactus">Contact us</NavLink>
+            <NavLink to="/Contactus">CONTACT US</NavLink>
           </li>
           <li>
             <NavLink to="/MOVIES">MOVIES</NavLink>
@@ -79,16 +80,16 @@ const ItemDetails = () => {
         <h1>THE GENERICS</h1>
       </header>
 
-      <h1>Product Detail</h1>
+      <h1 className="container">Product Detail</h1>
       {productsArr.map((products) => (
-       <div>{params.productId===products.id&&<div>
+       <div className="container">{params.productId===products.id&&<div>
           <div>
             <h4>Title: {products.title}</h4>
-          </div>
+          </div><br></br>
           <div>
             <img src={products.imageUrl} alt="products" />
           </div>
-          <span> </span>
+          <span> </span><br></br>
           <div>
             <h4>Rs.{products.price} </h4>
           </div>
