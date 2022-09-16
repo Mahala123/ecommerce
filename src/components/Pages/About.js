@@ -19,7 +19,7 @@ const About = () => {
           </li>
 
           <li>
-            <NavLink to="/Contactus">Contact us</NavLink>
+            <NavLink to="/Contactus">CONTACT US</NavLink>
           </li>
           <li>
             <NavLink to="/MOVIES">MOVIES</NavLink>
