@@ -45,11 +45,11 @@ const Header = (props) => {
           {" "}
           {isLoggedIn && <button className="cart-holder1" onClick={logoutHandler}>LOGOUT</button>}
         </li>
-
-        <button className="cart-holder" onClick={props.onclick}>
+         {isLoggedIn && <button className="cart-holder" onClick={props.onclick}>
           CART
           <span className="cart-number">{total}</span>
-        </button>
+        </button>}
+        
       </ul>
       <h1>THE GENERICS</h1>
     </header>
