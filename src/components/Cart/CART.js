@@ -5,53 +5,42 @@ import Cartcontext from "../Store/Cart-context";
 //import axios from "axios";
 
 // const cartElements = [
-  // {
-    // title: "Colors",
-// 
-    // price: 100,
-// 
-    // imageUrl:
-      // "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-// 
-    // quantity: 2,
-  // },
-// 
-  // {
-    // title: "Black and white Colors",
-// 
-    // price: 50,
-// 
-    // imageUrl:
-      // "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-// 
-    // quantity: 3,
-  // },
-// 
-  // {
-    // title: "Yellow and Black Colors",
-// 
-    // price: 70,
-// 
-    // imageUrl:
-      // "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-// 
-    // quantity: 1,
-  // },
+//   {
+//     title: "Colors",
+
+//     price: 100,
+
+//     imageUrl:
+//       "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
+
+//     quantity: 2,
+//   },
+
+//   {
+//     title: "Black and white Colors",
+
+//     price: 50,
+
+//     imageUrl:
+//       "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
+
+//     quantity: 3,
+//   },
+
+//   {
+//     title: "Yellow and Black Colors",
+
+//     price: 70,
+
+//     imageUrl:
+//       "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
+
+//     quantity: 1,
+//   },
 // ];
-// 
+
 const Cart = (props) => {
   let cartTotal=0;
-
-//   const Email=localStorage.getItem('Email');
-
-//   const E_mail=Email.replace('@','').replace('.','');
-//   console.log(E_mail);
-
-//  axios.get(`https://crudcrud.com/api/e5dae6a5f1ea443ba4b167509f1aa0a2/cart${E_mail}`).then(response=>{
-//   console.log(response.data[0]);
-//  })
- 
-
   const cardcntx=useContext(Cartcontext);
   
   const items = cardcntx.items.map((itemss) => (

@@ -26,7 +26,9 @@ const Cartitem = (props) => {
           <button onClick={removefromcart}>Remove</button>
         </div>
       </div>
+      
     </div>
+    
   );
 };
 
