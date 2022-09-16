@@ -52,15 +52,12 @@ const Product = () => {
       title={products.title}
       price={products.price}
       imageurl={products.imageUrl}
-      quantity={products.quantity}
-      
-      
-      
+      quantity={products.quantity} 
     />
   ));
 
   return(<div>
-    <h3 style={{ color:'black',textDecoration: 'underline'}}>MUSIC</h3>
+    <h3 style={{textAlign:'center', color:'black',textDecoration: 'underline'}}>MUSIC</h3>
 
     <ul className='productContainer'>{Productlists}</ul>
     </div>
