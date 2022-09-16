@@ -2,4 +2,10 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 20px 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.center{
+    align-items: center;
 }

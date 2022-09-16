@@ -4,7 +4,7 @@ const Movieslist=(props)=>{
     console.log(props);
 
     return(
-<ul>{props.movies.map((moviess)=>(
+          <ul>{props.movies.map((moviess)=>(
             <Display 
             id={moviess.id}
             title={moviess.title}
