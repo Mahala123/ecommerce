@@ -4,14 +4,14 @@ import "./Display.css";
 const Display = (props) => {
 
   return (
-    <React.Fragment>
-      <h2>{props.title}</h2>
+    <React.Fragment >
+      <h2>TITLE:{props.title}</h2>
       <span>
-        <h3>{props.releaseDate}</h3>
+        <h3>RELEASE DATE:{props.releaseDate}</h3>
       
       </span>
       <li>
-        <p>{props.openingdate}</p>
+        <p>REVIEW:{props.openingdate}</p>
         <div>
           <button onClick={props.onDelete}>DELETE MOVIE</button>
         </div>
