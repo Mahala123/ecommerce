@@ -14,7 +14,7 @@ const ProductList = (props) => {
     console.log(E_mail);
     let cart = cartctx.additems({ ...props, quantity: 1 });
     console.log(cart);
-      fetch(`https://crudcrud.com/api/81cd3bfff3af40238564cbbe25bd44fd/cart${E_mail}`,
+      fetch(`https://newecommerce-ad44d-default-rtdb.firebaseio.com/cart${E_mail}.json`,
         {
           method: 'POST',
         body:JSON.stringify({ 
