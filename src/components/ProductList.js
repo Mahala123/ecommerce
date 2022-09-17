@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import axios from "axios";
 import React, { useContext } from "react";
 import "./Productlist.css";
 import Cartcontext from "./Store/Cart-context";
@@ -11,17 +10,16 @@ const ProductList = (props) => {
   const Email = localStorage.getItem("Email");
 
   const E_mail = Email.replace("@", "").replace(".", "");
-  const additemstocarthandler = async () => {
+  const additemstocarthandler =() => {
     console.log(E_mail);
     let cart = cartctx.additems({ ...props, quantity: 1 });
-
     console.log(cart);
-
-    await axios
-      .post(
-        `https://crudcrud.com/api/81cd3bfff3af40238564cbbe25bd44fd/cart${E_mail}`,
+      fetch(`https://crudcrud.com/api/81cd3bfff3af40238564cbbe25bd44fd/cart${E_mail}`,
         {
+          method: 'POST',
+        body:JSON.stringify({ 
           cart: cart,
+          }),
         }
       )
       .then((response) => {

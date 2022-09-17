@@ -9,11 +9,12 @@ const CartProvider = (props) => {
     let Item=false;
     const newItemArray=[ ...items];
     newItemArray.forEach((element,index )=> {
-        if(item.id===element.id){
-        Item=true;
-            newItemArray[index].quantity=Number(newItemArray[index].quantity)+Number(item.quantity);   
-        }
-    });
+      if(item.id===element.id){
+      Item=true;
+          newItemArray[index].quantity=Number(newItemArray[index].quantity)+Number(item.quantity);   
+      }
+  });
+   
     if(Item===false)
     {
     updateItems([...items,item]);
