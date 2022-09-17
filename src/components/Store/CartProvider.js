@@ -6,26 +6,24 @@ const CartProvider = (props) => {
 
   const additemhandler = (item) => {
     console.log(item);
-    let hasItem=false;
+    let Item=false;
     const newItemArray=[ ...items];
     newItemArray.forEach((element,index )=> {
         if(item.id===element.id){
-        hasItem=true;
+        Item=true;
             newItemArray[index].quantity=Number(newItemArray[index].quantity)+Number(item.quantity);   
         }
     });
-    if(hasItem===false)
+    if(Item===false)
     {
     updateItems([...items,item]);
     return [...items,item];
     }
     else{
     updateItems(newItemArray);
-    
     return newItemArray;
     }
 };
-
   const removeitemhandler = (id) => {
     {
         const newItemArray=[ ...items];
@@ -33,9 +31,6 @@ const CartProvider = (props) => {
         if(id===index.id){
             newItemArray.splice(index,1);
         }
-       
-
-
         })
         updateItems(newItemArray);
     };
